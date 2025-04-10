@@ -1,1 +1,11 @@
-
+name: Simple Hello World
+'on':
+  - push
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Say Hello
+        run: "echo \"\U0001F44B Hello from GitHub Actions!\""
